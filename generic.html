@@ -1,96 +1,293 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Umair Khatab Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		.project-tags {
+			margin-top: 0.5rem;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			gap: 0.5rem;
+			flex-wrap: wrap;
+		}
+		.project-tags li {
+			background: #eee;
+			color: #333;
+			padding: 0.25rem 0.6rem;
+			border-radius: 4px;
+			font-size: 0.75rem;
+			font-weight: 600;
+		}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		.filter-buttons {
+			display: flex;
+			gap: 1rem;
+			flex-wrap: wrap;
+			margin: 2rem 0;
+			justify-content: center;
+		}
+		.filter-buttons button {
+			background-color: #007bff;
+			color: white;
+			border: none;
+			padding: 0.5rem 1rem;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+		.filter-buttons button:hover {
+			background-color: #0056b3;
+		}
+		.posts article {
+			display: none;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.posts article.show {
+			display: block;
+		}
+		.posts article:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		}
+		.posts article .image img {
+			transition: transform 0.3s ease;
+		}
+		.posts article:hover .image img {
+			transform: scale(1.03);
+		}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Umair Khatab</a>
-					</header>
+		/* Floating WhatsApp Button */
+		.whatsapp-float {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			background-color: #25D366;
+			color: white;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			z-index: 1000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform 0.3s ease;
+		}
+		.whatsapp-float:hover {
+			transform: scale(1.1);
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body class="is-preload">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Project</a></li>
-							<li class="active"><a href="generic.html">About Me</a></li>
-							<li><a href="elements.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://wa.me/923015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-							<li><a href="https://www.linkedin.com/in/umair-khatab-99134024b/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/UmairKhatab-Analyst" class="icon brands fa-github"><span class="label">github</span></a></li>
-						</ul>
-					</nav>
+	<!-- WhatsApp Floating Button -->
+	<a href="https://wa.me/923015289450" class="whatsapp-float" target="_blank">
+		<i class="fab fa-whatsapp"></i>
+	</a>
 
-				<!-- Main -->
-					<div id="main">
+	<div id="wrapper" class="fade-in">
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">Sep 25, 2023</span>
-									<h1>Hi, I'm Umair Khatab,  <br />
-										Data Analyst</h1>
-									<p>currently pursuing my Bachelor's degree in Business Analytics at International Islamic University Islamabad.</p>
-								</header>
-								<div class="image main"><img src="images/da.jpg" alt="" /></div>
-								<p>I have a deep interest in leveraging data to drive business growth and optimize decision-making processes.
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Umair Khatab<br /></h1>
+			<p>Data Analyst & Business Analyst | Python, Power BI, SQL, Excel <a href="https://wa.me/3015289450"> @ Umair Khatab</a></p>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
 
-									Throughout my academic journey, I’ve developed strong skills in data analysis, statistical modeling, and data visualization. I’ve worked with tools such as Python, R, SQL, and Excel to analyze complex datasets, extract meaningful insights, and present clear, actionable recommendations.
-									
-									My coursework and hands-on projects have given me practical experience in various aspects of business analytics, including market analysis, customer behavior modeling, and financial forecasting. I’m particularly passionate about using data to solve real-world business challenges and help organizations enhance their operational efficiency.</p>
-								<p>I enjoy working with large datasets, uncovering patterns, and turning raw data into strategic assets. As I continue to develop my skills in areas like machine learning and data visualization, I’m excited about the potential of data-driven solutions to transform industries.
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Umair Khatab</a>
+		</header>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">About Me</a></li>
+				<li class="active"><a href="generic.html">Projects</a></li>
+				<li><a href="elements.html">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://wa.me/923015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+				<li><a href="https://www.linkedin.com/in/umair-khatab-99134024b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/UmairKhatab-Analyst" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
 
-									Feel free to explore my GitHub projects, where I apply my knowledge to real-world problems and showcase my passion for business analytics</p>
-							</section>
+		<!-- Main -->
+		<div id="main">
 
-					</div>
+			<!-- Projects Section Title -->
+			<section class="post">
+				<header class="major">
+					<h2>Projects</h2>
+					<p>Here are some of the projects I’ve worked on, showcasing my skills in SQL, Power BI, Tableau, and Excel. These demonstrate my ability to analyze data, build dashboards, and derive insights.</p>
+				</header>
+			</section>
 
-				<!-- Footer -->
-					<footer id="footer">
-
-					</section>
-					<section>
-						<h3>Social</h3>
-						<ul class="icons alt">
-							<li><a href="https://wa.me/923015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-							<li><a href="https://www.linkedin.com/in/umair-khatab-99134024b/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/UmairKhatab-Analyst" class="icon brands fa-github"><span class="label">github</span></a></li>
-						</ul>
-						</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; All right reserved</li><li>Design By: <a href="#">Umair Khatab Abbasi</a></li></ul>
-					</div>
-
+			<!-- Filter Buttons -->
+			<div class="filter-buttons">
+				<button onclick="filterProjects('all')">All</button>
+				<button onclick="filterProjects('SQL')">SQL</button>
+				<button onclick="filterProjects('Power BI')">Power BI</button>
+				<button onclick="filterProjects('Tableau')">Tableau</button>
+				<button onclick="filterProjects('Excel')">Excel</button>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Projects -->
+			<section class="posts">
+				<article class="show">
+					<header>
+						<span class="date">July 25, 2024</span>
+						<h2><a href="https://github.com/UmairKhatab-Analyst/data-Cleaning-With-SQL">Data Cleaning in SQL</a></h2>
+					</header>
+					<a href="https://github.com/UmairKhatab-Analyst/data-Cleaning-With-SQL" class="image fit"><img src="images/sql.jpg" alt="SQL Project" /></a>
+					<p>Cleaned messy datasets using SQL by removing duplicates, handling nulls, and correcting inconsistent formats to prepare data for analysis.</p>
+					<ul class="project-tags">
+						<li>SQL</li>
+						<li>Data Cleaning</li>
+						<li>Database</li>
+					</ul>
+					<ul class="actions special">
+						<li><a href="https://github.com/UmairKhatab-Analyst/data-Cleaning-With-SQL" class="button">View Project</a></li>
+					</ul>
+				</article>
 
-	</body>
+				<article class="show">
+					<header>
+						<span class="date">Oct 09, 2024</span>
+						<h2><a href="https://github.com/UmairKhatab-Analyst/Sales-DashboardIn-PowerBI">Sales Dashboard in Power BI</a></h2>
+					</header>
+					<a href="https://github.com/UmairKhatab-Analyst/Sales-DashboardIn-PowerBI" class="image fit"><img src="images/power bi.jpg" alt="Power BI Dashboard" /></a>
+					<p>Power BI dashboard offering insights into sales performance, growth, and trends using interactive visualizations and filters.</p>
+					<ul class="project-tags">
+						<li>Power BI</li>
+						<li>Visualization</li>
+						<li>Sales Analysis</li>
+					</ul>
+					<ul class="actions special">
+						<li><a href="https://github.com/UmairKhatab-Analyst/Sales-DashboardIn-PowerBI" class="button">View Project</a></li>
+					</ul>
+				</article>
+
+				<article class="show">
+					<header>
+						<span class="date">September 18, 2024</span>
+						<h2><a href="https://github.com/UmairKhatab-Analyst/Tableau-Dashboard">Sales Dashboard Using Tableau</a></h2>
+					</header>
+					<a href="https://github.com/UmairKhatab-Analyst/Tableau-Dashboard" class="image fit"><img src="images/Teb.png" alt="Tableau Dashboard" /></a>
+					<p>Interactive dashboard visualizing sales metrics, trends, and performance using Tableau with dynamic filtering and visuals.</p>
+					<ul class="project-tags">
+						<li>Tableau</li>
+						<li>Dashboard</li>
+						<li>Sales</li>
+					</ul>
+					<ul class="actions special">
+						<li><a href="https://github.com/UmairKhatab-Analyst/Tableau-Dashboard" class="button">View Project</a></li>
+					</ul>
+				</article>
+
+				<article class="show">
+					<header>
+						<span class="date">April 22, 2024</span>
+						<h2><a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard">Interactive Excel Dashboard</a></h2>
+					</header>
+					<a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard" class="image fit"><img src="images/Excel.jpg" alt="Excel Dashboard" /></a>
+					<p>Designed a dashboard in MS Excel to track key metrics and visualize trends using pivot tables, charts, and dynamic filters.</p>
+					<ul class="project-tags">
+						<li>Excel</li>
+						<li>Dashboard</li>
+						<li>Data Analysis</li>
+					</ul>
+					<ul class="actions special">
+						<li><a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard" class="button">View Project</a></li>
+					</ul>
+				</article>
+				<article class="show">
+					<header>
+						<span class="date">April 22, 2024</span>
+						<h2><a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard">Interactive Excel Dashboard</a></h2>
+					</header>
+					<a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard" class="image fit"><img src="images/Excel.jpg" alt="Excel Dashboard" /></a>
+					<p>Designed a dashboard in MS Excel to track key metrics and visualize trends using pivot tables, charts, and dynamic filters.</p>
+					<ul class="project-tags">
+						<li>Excel</li>
+						<li>Dashboard</li>
+						<li>Data Analysis</li>
+					</ul>
+					<ul class="actions special">
+						<li><a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard" class="button">View Project</a></li>
+					</ul>
+				</article>
+			</section>
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					filterProjects("all");
+				});
+				function filterProjects(category) {
+					const articles = document.querySelectorAll(".posts article");
+					articles.forEach(article => {
+						const tags = Array.from(article.querySelectorAll(".project-tags li")).map(li => li.textContent);
+						if (category === "all" || tags.includes(category)) {
+							article.classList.add("show");
+						} else {
+							article.classList.remove("show");
+						}
+					});
+				}
+			</script>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section class="split contact">
+				<section class="alt">
+					<h3>Location</h3>
+					<p>International Islamic University Islamabad</p>
+				</section>
+				<section>
+					<h3>Contact No.</h3>
+					<p><a href="https://wa.me/923015289450">(+92) 301-5289450</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">umairkhatab359@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="https://wa.me/923015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+						<li><a href="https://www.linkedin.com/in/umair-khatab-99134024b/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+						<li><a href="https://github.com/UmairKhatab-Analyst" class="icon brands fa-github"><span class="label">github</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>&copy; All rights reserved</li><li>Design By: <a href="#">Umair Khatab Abbasi</a></li></ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
 </html>

@@ -1,166 +1,289 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Umair the Analyst</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Umair Khatab</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<style>
+		<style>
+  .about-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+  }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		section.post:nth-of-type(1) { background-color: #f2f2f2; padding: 2rem; border-radius: 8px; }
+		section.post:nth-of-type(2) { background-color: #e8f0fe; padding: 2rem; border-radius: 8px; }
+		section.post:nth-of-type(3) { background-color: #fef3c7; padding: 2rem; border-radius: 8px; }
+		section.post:nth-of-type(4) { background-color: #e0f7fa; padding: 2rem; border-radius: 8px; }
+		section.post:nth-of-type(5) { background-color: #f9e0e0; padding: 2rem; border-radius: 8px; }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Umair the Analyst<br />
-						</h1>
-						<p>A Comprehensive Data Analysis: Turning Raw Data into Actionable Insights<a href="https://www.linkedin.com/in/umair-khatab-99134024b/"> @ Umair Khatab
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+		.skills-section {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			justify-content: center;
+			margin-top: 40px;
+		}
+		.skill {
+			position: relative;
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 1rem;
+			color: #333;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		.skill:hover {
+			transform: scale(1.05);
+		}
+		.skill::after {
+			content: attr(data-label);
+			position: absolute;
+			bottom: -30px;
+			width: 100%;
+			text-align: center;
+			font-size: 0.9rem;
+			color: #666;
+		}
+		.skill:nth-child(1) { background: conic-gradient(#00bfff calc(var(--value) * 1%), #f0f0f0 0); }
+		.skill:nth-child(2) { background: conic-gradient(#28a745 calc(var(--value) * 1%), #f0f0f0 0); }
+		.skill:nth-child(3) { background: conic-gradient(#ffc107 calc(var(--value) * 1%), #f0f0f0 0); }
+		.skill:nth-child(4) { background: conic-gradient(#dc3545 calc(var(--value) * 1%), #f0f0f0 0); }
+		.skill:nth-child(5) { background: conic-gradient(#6f42c1 calc(var(--value) * 1%), #f0f0f0 0); }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Umair Khatab</a>
-					</header>
+		.certifications-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+		.cert-card {
+			border: 1px solid #ccc;
+			padding: 1rem;
+			border-radius: 8px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			color: white;
+		}
+		.cert-card:hover {
+			transform: scale(1.03);
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+		.cert-card h4 {
+			margin: 0 0 0.5rem 0;
+			font-size: 1rem;
+		}
+		.cert-card p {
+			margin: 0;
+			font-size: 0.9rem;
+			color: white;
+		}
+		.certifications-grid .cert-card:nth-child(1) { background-color: #007bff; }
+		.certifications-grid .cert-card:nth-child(2) { background-color: #17a2b8; }
+		.certifications-grid .cert-card:nth-child(3) { background-color: #28a745; }
+		.certifications-grid .cert-card:nth-child(4) { background-color: #ffc107; color: #212529; }
+		.certifications-grid .cert-card:nth-child(5) { background-color: #dc3545; }
+		.certifications-grid .cert-card:nth-child(6) { background-color: #6f42c1; }
+		.certifications-grid .cert-card:nth-child(7) { background-color: #20c997; }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Project</a></li>
-							<li><a href="generic.html">About Me</a></li>
-							<li><a href="elements.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://wa.me/923015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-							<li><a href="https://www.linkedin.com/in/umair-khatab-99134024b/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/UmairKhatab-Analyst" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+		.education-card {
+			background-color: #f9f9f9;
+			border-left: 5px solid #007bff;
+			padding: 1rem 1.5rem;
+			margin-bottom: 1rem;
+			border-radius: 5px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.education-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		}
+		.education-card h3 {
+			margin: 0 0 0.3rem 0;
+		}
+		.education-card p {
+			margin: 0;
+			font-size: 0.95rem;
+			color: #555;
+		}
 
-				<!-- Main -->
-					<div id="main">
+		/* WhatsApp Floating Button */
+		.whatsapp-float {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			background-color: #25D366;
+			color: white;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			z-index: 1000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform 0.3s ease;
+		}
+		.whatsapp-float:hover {
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body class="is-preload">
 
-						<!-- Featured Post -->
-						<article class="post featured">
-							<header class="major">
-								<span class="date">July 25, 2024</span>
-								<h2><a href="https://github.com/UmairKhatab-Analyst/data-Cleaning-With-SQL/tree/main/Data%20Cleaning%20With%20SQL">Data Cleaning 
-									in SQL<br />
-									</a></h2>
-								<p>Data Cleaning in SQL focuses on removing duplicates, handling missing values, and ensuring data consistency. These techniques enhance the accuracy and reliability of datasets for analysis.</p>
-							</header>
-							<a href="https://github.com/UmairKhatab-Analyst/data-Cleaning-With-SQL/tree/main/Data%20Cleaning%20With%20SQL" class="image main"><img src="images/SQL F.jpg" alt="" /></a>
-							<ul class="actions special">
-								<li><a href="https://github.com/UmairKhatab-Analyst/data-Cleaning-With-SQL/tree/main/Data%20Cleaning%20With%20SQL" class="button large">View Project</a></li>
-							</ul>
-						</article>
+	<!-- WhatsApp Button -->
+	<a href="https://wa.me/923015289450" class="whatsapp-float" target="_blank">
+		<i class="fab fa-whatsapp"></i>
+	</a>
 
-						<!-- Posts -->
-						<section class="posts">
-							<article>
-								<header>
-									<span class="date">September 18, 2024</span>
-									<h2><a href="https://github.com/UmairKhatab-Analyst/Tableau-Dashboard">Sales Dashboard Using Tableau <br /></a></h2>
-								</header>
-								<a href="https://github.com/UmairKhatab-Analyst/Tableau-Dashboard" class="image fit"><img src="images/Teb.png" alt="" /></a>
-								<p>Interactive Sales Dashboard built using Tableau to visualize key performance metrics, track sales trends, and identify opportunities for growth with dynamic, real-time data insights</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/UmairKhatab-Analyst/Tableau-Dashboard" class="button">View Project</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<span class="date">April 22, 2024</span>
-									<h2><a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard">Interactive Dashboard<br />
-									using MS Excel</a></h2>
-								</header>
-								<a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard" class="image fit"><img src="images/Excel.jpg" alt="" /></a>
-								<p>Sales Dashboard created in Excel to track key metrics, visualize performance trends, and provide insights through interactive charts and pivot tables. Designed to help monitor sales progress and make data-driven decisions efficiently.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/UmairKhatab-Analyst/Excel-Dashboard" class="button">View Project</a></li>
-								</ul>
-							</article>
-							<article>
-								<header>
-									<span class="date">Oct 09, 2024</span>
-									<h2><a href="https://github.com/UmairKhatab-Analyst/Sales-DashboardIn-PowerBI">Sales Insights: Visualizing Performance with Power BI<br />
-									</a></h2>
-								</header>
-								<a href="https://github.com/UmairKhatab-Analyst/Sales-DashboardIn-PowerBI" class="image fit"><img src="images/Power.jpeg" alt="" /></a>
-								<p>This dashboard provides a comprehensive view of sales performance by visualizing key metrics such as revenue, growth trends, and regional sales distribution. It enables stakeholders to track progress, identify opportunities, and make data-driven decisions through interactive visualizations and real-time insights.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/UmairKhatab-Analyst/Sales-DashboardIn-PowerBI" class="button">View Project</a></li>
-								</ul>
-						</section>
+	<div id="wrapper" class="fade-in">
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+		<!-- Intro -->
+		<div id="intro">
+			<h1>Umair Khatab<br /></h1>
+			<p>Data Analyst & Business Analyst | Python, Power BI, SQL, Excel <a href="https://wa.me/3015289450"> @ Umair Khatab</a></p>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
 
-					</div>
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Umair Khatab</a>
+		</header>
 
-				<!-- Footer -->
-					<footer id="footer">
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">About Me</a></li>
+				<li><a href="generic.html">Projects</a></li>
+				<li><a href="elements.html">Contact</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://wa.me/3015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+				<li><a href="https://www.linkedin.com/in/umair-abbasi-3701b5368/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
 
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>International Islamic University Islamabad<br /></p>
-							</section>
-							<section>
-								<h3>Contact No.</h3>
-								<p><a href="https://wa.me/923015289450">(+92) 301-5289450</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">umairkhatab359@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://wa.me/923015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-									<li><a href="https://www.linkedin.com/in/umair-khatab-99134024b/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/UmairKhatab-Analyst" class="icon brands fa-github"><span class="label">github</span></a></li>
-							</section>
-						</section>
-					</footer>
+		<!-- Main -->
+		<div id="main">
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; All right reserved</li><li>Design By: <a href="#">Umair Khatab Abbasi</a></li></ul>
-					</div>
+			<!-- About -->
+			<section class="post">
+				<header class="major">
+					<h1></h1>
+					<p></p>
+				</header>
+				<div class="image main">
+  <img src="images/WhatsApp Image 2025-07-14 at 5.16.02 AM.jpeg"
+       alt=""
+       style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+       data-aos="zoom-in"
+       data-aos-duration="1000" />
+  <h2 style="text-align:center; margin-top: 1rem;">Umair Khatab</h2>
+  <p style="text-align:center; color:#666;">Data Analyst | Business Analyst</p>
+</div>
 
-			</div>
+				<p>I am pursuing a Bachelor of Science in Business Analytics and passionate about transforming raw data into actionable insights using tools like Python, SQL, Power BI, and Excel.</p>
+				<p>I have worked on several data projects involving data cleaning, transformation, and visualization using tools like Power BI and Tableau. With hands-on experience in Python libraries such as Pandas, NumPy, and Matplotlib, I enjoy solving business problems through data.</p>
+				<p>My educational background and certifications in data analytics enable me to approach problems analytically, communicate findings effectively, and support decision-making through meaningful dashboards and reports.</p>
+			</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Education -->
+			<section class="post">
+				<header class="major"><h2>Education</h2></header>
+				<div class="education-card">
+					<h3>Bachelor of Science in Business Analytics</h3>
+					<p><strong>International Islamic University Islamabad</strong><br>Sep 2022 – Jun 2026</p>
+				</div>
+				<div class="education-card">
+					<h3>Data Science in AI</h3>
+					<p><strong>National University of Sciences and Technology (NUST)</strong><br>Apr – Jul 2025</p>
+				</div>
+			</section>
 
-	</body>
+			<!-- Skills -->
+			<section class="post">
+				<header class="major"><h2>Skills</h2></header>
+				<div class="skills-section">
+					<div class="skill" style="--value:85" data-label="Python (85%)">85%</div>
+					<div class="skill" style="--value:90" data-label="Excel (90%)">90%</div>
+					<div class="skill" style="--value:85" data-label="SQL (85%)">85%</div>
+					<div class="skill" style="--value:60" data-label="R Programming (60%)">60%</div>
+					<div class="skill" style="--value:90" data-label="Visualization (90%)">90%</div>
+				</div>
+			</section>
+
+			<!-- Certifications -->
+			<section class="post">
+				<header class="major"><h2>Certifications</h2></header>
+				<div class="certifications-grid">
+					<div class="cert-card"><h4>Excel Basics for Analysis</h4><p>Coursera – Jun 2023</p></div>
+					<div class="cert-card"><h4>Data Visualization & Dashboard with Excel</h4><p>Coursera – Jun 2023</p></div>
+					<div class="cert-card"><h4>Python for Data Science</h4><p>Coursera – Jul 2023</p></div>
+					<div class="cert-card"><h4>Databases and SQL for Data Science</h4><p>Coursera – Jul 2023</p></div>
+					<div class="cert-card"><h4>Fundamentals of Visualization with Tableau</h4><p>Coursera – Jul 2023</p></div>
+					<div class="cert-card"><h4>Data Analysis with Python</h4><p>Coursera – Aug 2023</p></div>
+					<div class="cert-card"><h4>Data Visualization with Python</h4><p>Coursera</p></div>
+				</div>
+			</section>
+
+			<section class="post">
+	<header class="major">
+		<h2><i class="fas fa-file-alt" style="color:#007bff;"></i> My Resume</h2>
+	</header>
+
+	<div style="max-width: 600px; margin: 0 auto; background-color: #f9f9f9; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
+		<p style="font-size: 1.1rem; margin-bottom: 1rem;">
+			You can download my professional resume in PDF format to see my qualifications and experiences.
+		</p>
+		<a href="images/Umair Khatab.pdf" download
+		   class="button icon solid fa-download"
+		   style="background-color: #007bff; color: white; padding: 0.75rem 2rem; font-size: 1.1rem; border-radius: 5px;">
+			Download Resume
+		</a>
+	</div>
+</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+			<h3>Social</h3>
+				<ul class="icons alt">
+					<li><a href="https://wa.me/3015289450" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+					<li><a href="https://www.linkedin.com/in/umair-abbasi-3701b5368/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul><li>&copy; All rights reserved</li><li>Design By: <a href="https://wa.me/+923015289450">Umair Khatab Abbasi</a></li></ul>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
 </html>
